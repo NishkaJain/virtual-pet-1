@@ -1,12 +1,12 @@
 //Create variables here
-var dog;
+var dog, dogImg;
 var happyDog;
 var database;
 var foodS;
 var foodStock;
 
 function preload(){
-  dog = loadImage("Dog.png");
+  dogImg = loadImage("Dog.png");
   happyDog = loadImage("happydog.png");
 	
 }
@@ -19,8 +19,8 @@ function setup() {
   foodStock=database.ref('Food');
   foodStock.on("value",readStock);
 
-  dog = createSprites(200,200);
-  dog.addImage(dog);
+  dog = createSprite(200,200);
+  dog.addImage(dogImg);
   
 }
 
